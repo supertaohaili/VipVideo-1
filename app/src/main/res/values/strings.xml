@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">VipVideo</string>
+
+    <string name="tab_home">首页</string>
+    <string name="tab_activity">活动</string>
+    <string name="tab_message">消息</string>
+    <string name="tab_account">我的</string>
+
+    <string name="home_notice">VIP影视助手隆重1.0版上线,使用过程中有任何问题，获取发现Bug可以发送邮件到ydmmocoo@gmail.com!</string>
+    <string name="home_tencent_menu">腾讯视频</string>
+    <string name="home_aiqiyi_menu">爱奇艺</string>
+    <string name="home_youku_menu">优酷视频</string>
+    <string name="home_le_menu">乐视视频</string>
+    <string name="home_pptv_menu">PPTV视频</string>
+    <string name="home_sohu_menu">搜狐视频</string>
+    <string name="home_imgo_menu">芒果TV</string>
+    <string name="home_1905_menu">电影网</string>
+
+    <string name="tencent_url">https://v.qq.com/</string>
+    <string name="aiqiyi_url">http://www.iqiyi.com/</string>
+    <string name="youk_url">http://www.youku.com/</string>
+    <string name="lev_url">http://www.le.com/</string>
+    <string name="pptv_url">http://www.pptv.com/</string>
+    <string name="sohu_url">https://m.tv.sohu.com/</string>
+    <string name="imgo_url">https://www.mgtv.com/</string>
+    <string name="film_1905_url">http://www.1905.com/</string>
+
+    <string name="titlebar_search_hint">Search</string>
+
+</resources>

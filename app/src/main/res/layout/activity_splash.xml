@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/start"/>
+
+    <com.marsye.vipvideo.widget.RoundProgressBar
+        android:id="@+id/btn_rpb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rpb_autoStart="true"
+        app:rpb_centerBackgroundColor="@color/color_red"
+        app:rpb_centerText="跳过"
+        app:rpb_centerTextColor="@color/color_white"
+        app:rpb_centerTextSize="12sp"
+        app:rpb_countDownTimeInMillis="5000"
+        app:rpb_progressDirection="forward"
+        app:rpb_sweepStartAngle="180"
+        app:rpb_sweepStrokeColor="@color/color_white"
+        app:rpb_sweepStrokeWidth="2dp"/>
+
+</android.support.constraint.ConstraintLayout>

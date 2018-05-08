@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.marsye.vipvideo"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Specifies the ABI configurations of your native
+        // libraries Gradle should build and package with your APK.
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api('com.android.support:appcompat-v7:26.1.0') {
+        exclude group: 'com.android.support'
+    }
+    api('com.android.support:design:26.1.0') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test:runner:1.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //butterknife  https://github.com/JakeWharton/butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //QMUI_Android  https://github.com/QMUI/QMUI_Android
+    implementation 'com.qmuiteam:qmui:1.1.2'
+    //PictureSelector  https://github.com/LuckSiege/PictureSelector
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //KLog  https://github.com/ZhaoKaiQiang/KLog
+    implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'
+    //Glide  https://github.com/bumptech/glide
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    //Glide加载圆形、圆角等图片 https://github.com/wasabeef/glide-transformations
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    //BaseRecyclerViewAdapterHelper  https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
+    //(下拉刷新，上拉加载更多)SmartRefreshLayout  https://github.com/scwang90/SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.11.3'
+    //视频播放 https://github.com/dueeeke/dkplayer
+    implementation 'com.github.dueeeke.dkplayer:dkplayer-java:2.4.0'
+    implementation 'com.github.dueeeke.dkplayer:dkplayer-armv7a:2.4.0'
+
+    implementation files('libs/tbs_sdk.jar')
+}
